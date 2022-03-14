@@ -1,8 +1,10 @@
 const Discord  = require('discord.js');
+require('dotenv').config();
+const client = New Discord.Client({ partials: ["MESSAGE", "CHANNEL", "REACTION"]});
 
-const client = new Discord.Client();
 
 client.commands = new Discord.Collection();
+client.events = new Discord.Collection();
 
 ['command_handler', 'event_handler'].forEach(handler =>{
     require(`./handlers/${handler}`)(client, Discord);
@@ -10,4 +12,4 @@ client.commands = new Discord.Collection();
 });
 
 
-client.login('example');
+client.login(process.env.DISCORD_TOKEN);

@@ -4,6 +4,5 @@ module.exports = {
     execute(message, args){
 
         message.channel.send('Stats of a Player ######');
-
     }
 }

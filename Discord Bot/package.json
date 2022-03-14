@@ -9,6 +9,7 @@
   "author": "Stoyan",
   "license": "ISC",
   "dependencies": {
+    "call-of-duty-api": "^3.1.1",
     "discord.js": "^13.6.0",
     "fs": "0.0.1-security"
   }
